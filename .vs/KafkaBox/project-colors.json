@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4096d39b-676f-4204-8305-e12d8f3b15c6": {
+      "ProjectGuid": "4096d39b-676f-4204-8305-e12d8f3b15c6",
+      "DisplayName": "KafkaBox",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

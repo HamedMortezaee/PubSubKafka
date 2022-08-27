@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "J9Dk/7C/nwVYif0Cs0vOdr6w+aMJVOwNFXz2by6XJ/J0Bd0QSTYnF3b10Sde+VPXm9hbULdayD9R3zsH9eZL+g==",
+  "success": true,
+  "projectFilePath": "F:\\test\\KafkaBox\\KafkaBox\\KafkaBox.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asua\\.nuget\\packages\\kafka-net\\0.9.0.65\\kafka-net.0.9.0.65.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'kafka-net 0.9.0.65' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "kafka-net",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
