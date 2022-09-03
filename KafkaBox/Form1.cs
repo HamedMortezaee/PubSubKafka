@@ -1,5 +1,5 @@
-using KafkaNet;
-using KafkaNet.Model;
+using Confluent.Kafka;
+using System.Net;
 using System.Text;
 using System.Threading;
 
@@ -19,19 +19,39 @@ namespace KafkaBox
                 MessageBox.Show("اطلاعات آدرس یا تاپیک اجباری می باشد");
                 return;
             }
-            Uri uri = new Uri(txt_kafka_ddress.Text);
             string topic = txt_topic_publish.Text;
-
             string payload = richtxt_publish.Text;
-            var sendMessage = new Thread(() =>
-            {
-                KafkaNet.Protocol.Message msg = new KafkaNet.Protocol.Message(payload);
-                var options = new KafkaOptions(uri);
-                var router = new BrokerRouter(options);
-                var client = new Producer(router);
-                client.SendMessageAsync(topic, new List<KafkaNet.Protocol.Message> { msg }).Wait();
+            Task.Run(async () => {
+                await SendOrderRequest(topic, payload);
             });
-            sendMessage.Start();
+
+        }
+
+        private async Task<bool> SendOrderRequest(string topic, string message)
+        {
+            ProducerConfig config = new ProducerConfig
+            {
+                BootstrapServers = txt_kafka_ddress.Text,
+                ClientId = Dns.GetHostName()
+            };
+
+            try
+            {
+                using (var producer = new ProducerBuilder<Null, string>(config).Build())
+                {
+                    var result = await producer.ProduceAsync(topic, new Message<Null, string>
+                    {
+                        Value = message
+                    });
+                    return await Task.FromResult(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error occured: {ex.Message}");
+            }
+
+            return await Task.FromResult(false);
         }
 
         private void btn_subscribe_Click(object sender, EventArgs e)
@@ -41,18 +61,30 @@ namespace KafkaBox
                 MessageBox.Show("اطلاعات آدرس یا تاپیک اجباری می باشد");
                 return;
             }
-
-
-            Task.Run(() =>
-            {
-                Uri uri = new Uri(txt_kafka_ddress.Text);
-                string topicName = txt_topic_subscribe.Text;
-                var options = new KafkaOptions(uri);
-                var brokerRouter = new BrokerRouter(options);
-                var consumer = new Consumer(new ConsumerOptions(topicName, brokerRouter));
-                foreach (var msg in consumer.Consume())
+            Task.Run(() => {
+                ConsumerConfig conf = new ConsumerConfig()
                 {
-                    SetText(Encoding.UTF8.GetString(msg.Value));
+                    GroupId = "test_group",
+                    BootstrapServers = "10.100.8.220:2004",
+                    AutoOffsetReset = AutoOffsetReset.Earliest
+                };
+                using (var builder = new ConsumerBuilder<Ignore, string>(conf).Build())
+                {
+                    builder.Subscribe("testtopic");
+                    var cancelToken = new CancellationTokenSource();
+                    try
+                    {
+                        while (true)
+                        {
+                            var consumer = builder.Consume(cancelToken.Token);
+                            SetText(consumer.Message.Value);
+                            Console.WriteLine($"Message: {consumer.Message.Value} received from {consumer.TopicPartitionOffset}");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        builder.Close();
+                    }
                 }
             });
 
@@ -76,6 +108,7 @@ namespace KafkaBox
                 this.listBox_subscribe.Items.Add(text);
             }
         }
+
 
     }
 }

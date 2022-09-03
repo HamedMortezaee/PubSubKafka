@@ -45,9 +45,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "kafka-net": {
+            "Confluent.Kafka": {
               "target": "Package",
-              "version": "[0.9.0.65, )"
+              "version": "[1.9.2, )"
             }
           },
           "imports": [
