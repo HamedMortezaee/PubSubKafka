@@ -58,9 +58,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(22, 294);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(741, 828);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -70,7 +70,7 @@
             // 
             this.btn_publish.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_publish.Location = new System.Drawing.Point(30, 747);
-            this.btn_publish.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_publish.Margin = new System.Windows.Forms.Padding(6);
             this.btn_publish.Name = "btn_publish";
             this.btn_publish.Size = new System.Drawing.Size(154, 68);
             this.btn_publish.TabIndex = 4;
@@ -95,7 +95,7 @@
             this.richtxt_publish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richtxt_publish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.richtxt_publish.Location = new System.Drawing.Point(30, 269);
-            this.richtxt_publish.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.richtxt_publish.Margin = new System.Windows.Forms.Padding(6);
             this.richtxt_publish.Name = "richtxt_publish";
             this.richtxt_publish.Size = new System.Drawing.Size(682, 435);
             this.richtxt_publish.TabIndex = 2;
@@ -118,18 +118,17 @@
             this.txt_topic_publish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_topic_publish.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_topic_publish.Location = new System.Drawing.Point(30, 130);
-            this.txt_topic_publish.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_topic_publish.Margin = new System.Windows.Forms.Padding(6);
             this.txt_topic_publish.Name = "txt_topic_publish";
             this.txt_topic_publish.Size = new System.Drawing.Size(682, 39);
             this.txt_topic_publish.TabIndex = 0;
-            this.txt_topic_publish.Text = "tetstopic";
             // 
             // btn_subscribe
             // 
             this.btn_subscribe.BackColor = System.Drawing.Color.NavajoWhite;
             this.btn_subscribe.ForeColor = System.Drawing.Color.OrangeRed;
             this.btn_subscribe.Location = new System.Drawing.Point(28, 747);
-            this.btn_subscribe.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_subscribe.Margin = new System.Windows.Forms.Padding(6);
             this.btn_subscribe.Name = "btn_subscribe";
             this.btn_subscribe.Size = new System.Drawing.Size(206, 68);
             this.btn_subscribe.TabIndex = 5;
@@ -147,9 +146,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.OrangeRed;
             this.groupBox2.Location = new System.Drawing.Point(838, 294);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox2.Size = new System.Drawing.Size(741, 828);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -161,7 +160,7 @@
             this.listBox_subscribe.FormattingEnabled = true;
             this.listBox_subscribe.ItemHeight = 32;
             this.listBox_subscribe.Location = new System.Drawing.Point(28, 297);
-            this.listBox_subscribe.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBox_subscribe.Margin = new System.Windows.Forms.Padding(6);
             this.listBox_subscribe.Name = "listBox_subscribe";
             this.listBox_subscribe.Size = new System.Drawing.Size(682, 388);
             this.listBox_subscribe.TabIndex = 3;
@@ -195,11 +194,10 @@
             this.txt_topic_subscribe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_topic_subscribe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_topic_subscribe.Location = new System.Drawing.Point(28, 130);
-            this.txt_topic_subscribe.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_topic_subscribe.Margin = new System.Windows.Forms.Padding(6);
             this.txt_topic_subscribe.Name = "txt_topic_subscribe";
             this.txt_topic_subscribe.Size = new System.Drawing.Size(682, 39);
             this.txt_topic_subscribe.TabIndex = 2;
-            this.txt_topic_subscribe.Text = "tetstopic";
             // 
             // groupBox3
             // 
@@ -208,9 +206,9 @@
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox3.Location = new System.Drawing.Point(22, 26);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox3.Size = new System.Drawing.Size(1556, 241);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -233,7 +231,7 @@
             this.txt_kafka_ddress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txt_kafka_ddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txt_kafka_ddress.Location = new System.Drawing.Point(30, 130);
-            this.txt_kafka_ddress.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txt_kafka_ddress.Margin = new System.Windows.Forms.Padding(6);
             this.txt_kafka_ddress.Name = "txt_kafka_ddress";
             this.txt_kafka_ddress.Size = new System.Drawing.Size(682, 39);
             this.txt_kafka_ddress.TabIndex = 0;
@@ -247,7 +245,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kafka";
